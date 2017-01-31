@@ -1,0 +1,496 @@
+@font-face {
+    font-family: Circularfont;
+    src: url(CircularStd-Book.otf); 
+}
+
+@font-face {
+    font-family: socialmedia;
+    src: url(social_shapes.ttf); 
+}
+
+@font-face {
+    font-family: oldsansblack;
+    src: url(OldSansBlack.ttf); 
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Circularfont;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ------------------------------------------ */
+
+/* ----------------- Header ----------------- */
+
+header {
+    width: 100%;
+    background: #fff;
+    border-bottom: solid 2px #fb4f4f;
+    z-index: 10;
+    height: 80px;
+    position: relative;
+}
+
+#redone {
+    position:absolute;
+    height: 84px;
+    border-bottom: solid 2px #fb4f4f;
+    width: 100%;
+}
+#redtwo {
+    position:absolute;
+    height: 88px;
+    border-bottom: solid 2px #fb4f4f;
+    width: 100%;
+}
+
+#headerwrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo{
+    float: left;
+    margin-top: 14px;
+    width: 202px;
+    margin-left: 10px;
+    z-index: 100 !important; 
+    position: relative;
+}
+#mobillogo{
+    float: left;
+    margin-left: 5px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+/* ---------------------- mobilnav --------------- */
+
+.mobilnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 120%;
+    background-color:#f8f0f0;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.6s ease;
+    border-left: 3px solid #862c2c;
+    z-index: 10000;
+}
+.mobilnav.open {
+    transform: translateX(0);
+}
+.mobilnav li{
+    list-style: none;
+}
+.mobilnav ul a{
+    text-decoration: none;
+    padding: 25px 20px;
+    display:block;
+    color: #601313;
+    font-size: 1.3em;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: oldsansblack;
+}
+.mobilnav ul a:active{
+    font-weight: bold;
+}
+.mobilnav ul a:hover{
+    font-weight: bold;
+}
+
+.burgerlist {
+    padding-top: 5%;
+}
+
+.nav-toggle{
+    float: right;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.toggleclose{
+    height: 60px;
+    width:60px;
+    float: right;
+    cursor: pointer;
+    background: url(../img/icon/burgerclose.png);
+
+}
+
+.toggleclose:hover{
+    background: url(../img/icon/burgerclosehover.jpg);
+}
+.toggleclose:active{
+    background: url(../img/icon/burgerclosehover.jpg);
+}
+.marginwrap {
+    margin-top: 15%;
+}
+
+/* ------------------- desknav ------------------ */
+
+/*----------------- desktop -------------------*/
+
+.desknav
+{
+    list-style: none;
+    padding: 0;
+    float: right;
+    height: 100%;
+    text-align: center;
+}
+
+.desknav > li
+{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 155px;
+}
+
+.desknav a:hover { 
+    color: #6c1b1b;
+}
+
+
+.desknav a
+{
+    color: #6f625c;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    line-height: 80px;
+    font-size: 1.1em;
+    font-family: oldsansblack;
+
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+/*------------ main -----------------*/
+
+main {
+    height: 1500px;
+    margin-top: 8px;
+}
+
+/* --------------- slider -----------------*/
+
+
+#slideswrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.callbacks_nav{
+    position: absolute;
+    top: 52%;
+    left: 0;
+    height: 61px;
+    width: 38px;
+    z-index: 3;
+    background: transparent url("../img/slider/themes.gif") no-repeat left top;
+    opacity: 0.6;
+    text-indent: -9999px;
+    margin-top: -45px;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    text-decoration: none;
+    
+    
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.callbacks_nav:active {
+  opacity: 1.0;
+  }
+.callbacks_nav:hover {
+    opacity: 1.0;
+}
+
+.callbacks_nav.next {
+    left: auto;
+    right: 0;
+    background-position: right top;
+}
+
+
+
+/*-------------- footer ----------------------*/
+
+footer {
+    background: #d16363;
+}
+
+#footerwrapper {
+    max-width: 850px;
+    margin: auto;
+}
+
+.footerul {
+    display: inline-block;
+    height: 80px;
+    line-height: 35px;
+    margin-top: 25px;
+    margin-left: 3%;
+    margin-bottom: 30px;
+}
+
+.footerul li {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+#sprogwrapper {
+    display: inline-block;
+    position: relative;
+}
+#sprogselect {
+    background: transparent;
+    border: #fff 1px solid;
+    color: #000;
+}
+
+#socialwrapper {
+    display: inline-block;
+    float:right; 
+
+}
+
+#socialwrapper > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#socialwrapper > a:hover {
+    color:#b75454;
+
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+#socialiconyoutube {
+    font-family: socialmedia;
+    font-size: 75px;
+}
+
+#socialiconfacebook {
+    font-family: socialmedia;
+    font-size: 75px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+
+/* ---------------- mediaQ ----------------- */
+
+
+
+
+@media all and (min-width: 0px) {
+    .mobilnav {
+        display: block;
+    }
+    .desknav {
+        display: none;
+    }
+    .nav-toggle{
+        height: 60px;
+        width: 60px;
+        margin-right: 10px;
+        background: url(../img/icon/burger3.png);
+    }
+    .nav-toggle:hover{
+        background: url(../img/icon/burgerhover3.png);
+    }
+    .nav-toggle:active{
+        background: url(../img/icon/burgerhover3.png);
+    }
+    .footerul {
+        width: 45%;
+        text-align: center;
+    }
+    #socialwrapper {
+        float:none;
+        margin-bottom: 30px;
+        width:35%;
+        text-align: right;
+    }
+    #sprogwrapper {
+        width:30%;
+        margin-left: 10%;
+        position: relative;
+    }
+    #sprogselect {
+        width:160px;
+        font-size: 16px;
+        height: 29px;
+        position: absolute;
+        top: -35px;
+    }
+} 
+
+
+
+@media all and (min-width: 450px){
+    #sprogselect {
+        width:160px;
+    }
+    #sprogwrapper {
+        width:45%;
+    }
+    #socialwrapper {
+
+    }
+}
+@media all and (min-width: 660px){
+    #sprogwrapper {
+        margin-left: 20px;
+        width:inherit;
+    }
+    #sprogselect {
+        width: 100px;
+    }
+    .footerul{
+        width: initial;
+    }
+    #socialwrapper {
+        float:right;
+        margin-top: 24px;
+        width:inherit;
+    }
+    #sprogselect {
+        font-size: 14px;
+        height: 29px;
+        width: 100px;
+        position: absolute;
+        top: -35px;
+    }
+}
+
+@media all and (min-width: 700px){
+    #sprogwrapper {
+        margin-left: 40px;
+    }
+    #sprogselect {
+        width: 120px;
+    }
+
+}
+
+
+
+@media all and (min-width: 768px) {
+    .mobilnav {
+        display: none;
+    }
+    .desknav {
+        display: block;
+    }
+    .nav-toggle{
+        display:none;
+    }
+    #sprogwrapper {
+        margin-left: 100px;
+    }
+}
+@media all and (min-width: 840px) {
+    #sprogwrapper {
+        margin-left: 160px;
+    }
+}
+
+
+
