@@ -222,6 +222,7 @@ header {
 
 main {
     margin-top: 8px;
+    min-height: 600px;
 }
 
 /*------------- index ----------------*/
